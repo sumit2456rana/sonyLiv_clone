@@ -16,22 +16,22 @@ const data = [
   "https://images.slivcdn.com/portrait_thumb/Pushpa1_Portrait_Thumb.jpg?w=194&q=high&fr=webp",
 ]
 function PopularSearches() {
-  const [movies , setMovies] = useState([]);
-  async function fetchData() {
-    let url = "https://academics.newtonschool.co/api/v1/ott/show?filter={\"type\" : \"web series\"}";
-    const resp = await fetch(url , {
-      headers:{
-        'projectId' : "ub5yjy8wj6ez",
-      }
-    })
+  // const [movies , setMovies] = useState([]);
+  // async function fetchData() {
+  //   let url = "https://academics.newtonschool.co/api/v1/ott/show?filter={\"type\" : \"web series\"}";
+  //   const resp = await fetch(url , {
+  //     headers:{
+  //       'projectId' : "ub5yjy8wj6ez",
+  //     }
+  //   })
 
-    const data = await resp.json();
-    // console.log(data);
-    setMovies(data.data);
-  }
-  useEffect(() => {
-    fetchData();
-  }, [])
+  //   const data = await resp.json();
+  //   // console.log(data);
+  //   setMovies(data.data);
+  // }
+  // useEffect(() => {
+  //   fetchData();
+  // }, [])
   return (
     <div>
       <div className="categories_header">
@@ -39,8 +39,8 @@ function PopularSearches() {
       </div>
       <div className="popSearches_container">
         {
-          movies.map((e , i) => (
-             <img src={e.thumbnail} key={i} /> 
+          data.map((e , i) => (
+             <img src={e} key={i} /> 
           ))
         }
       </div>
