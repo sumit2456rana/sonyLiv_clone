@@ -1,0 +1,69 @@
+.searchPageWrapper {
+    min-height: 100vh;
+    background-color: rgb(0,0,0);
+    padding: 4.375rem 30px 4.375rem 3.75rem; 
+    color: #fff; 
+    font-family: "SFProText-Regular" , sans-serif;
+}
+.closeicon_container {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+}
+.closeicon_container svg {
+    font-size: 3.5rem;
+    color: grey;
+    cursor: pointer;
+}
+.input_container input {
+    width: 92%;
+    height: 3.6rem;
+    padding: 22px 40px;
+    font-size: 1.25rem;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+}
+.input_container input::placeholder {
+    font-family: "SFProText-Regular" , sans-serif;
+}
+.categories_header {
+    margin-top: 4.125rem;
+}
+.categories_header h2 {
+    font-size: 1.5rem;
+}
+.categories_container {
+    display: flex;
+    margin-top: 30px;
+}
+.eachCategories {
+    background-image: linear-gradient(102deg, rgba(72,85,99,0.3), rgba(41,50,60,0.3) 99%);
+    border-radius: 21px;
+    width: max-content;
+    padding: 0.5% 2%;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 1%;
+    font-size: .875rem;
+    font-weight: 400;
+}
+.eachCategories label {
+    cursor: pointer;
+}
+
+.popSearches_container {
+    margin-top: 1.875rem;
+}
+.popSearches_container img {
+    width: 9.375rem;
+    height: 13.4375rem;
+    margin-right: 8px;
+    margin-bottom: 6px;
+    border-radius: 0.625em;
+    transition: 0.2s transform ease;
+    cursor: pointer;
+}
+.popSearches_container img:hover {
+    transform: scale(1.075);
+}

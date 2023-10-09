@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import HomePage from "./components/Home Page/HomePage";
+import ListingMovies from "./components/Listing Movies/ListingMovies";
+import SignIn from "./components/Navbar/SignIn";
+import Register from "./components/Navbar/Register";
+import { AppContextProvider } from "./components/AppContextProvider";
+import UserProfile from "./components/Navbar/UserProfile";
+import EditDetails from "./components/Navbar/EditDetails";
+import Movie from "./components/Listing Movies/Movie";
+import MyList from "./components/MyList/MyList";
+import SearchPage from "./components/Search Functionality/SearchPage";
 
-function App() {
+export default function App() {
+  const location = useLocation();
+
+  const isSearchPage = () => {
+    return location.pathname === "/search";
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppContextProvider>
+        {!isSearchPage() && <Navbar />}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <HomePage />
+                <ListingMovies />
+              </>
+            }
+          />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<Register />} />
+          <Route path="/myaccount" element={<UserProfile />} />
+          <Route path="/myaccount/editdetails" element={<EditDetails />} />
+          <Route path="/movies/:id" element={<Movie />} />
+          <Route path="/usercenter/mylist" element={<MyList />} />
+          <Route path="/search" element={<SearchPage />} />
+        </Routes>
+      </AppContextProvider>
     </div>
   );
 }
-
-export default App;
