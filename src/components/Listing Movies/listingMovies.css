@@ -106,6 +106,7 @@
 .subsBtnMovie {
     /* margin-top: 25px; */
     display: flex;
+    cursor: pointer;
     width: 22rem;
     padding: 6px 8px;
     justify-content: space-between;

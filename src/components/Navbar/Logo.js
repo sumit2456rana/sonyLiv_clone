@@ -1,6 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Logo() {
+  const navigate = useNavigate();
   return (
     <div className="logo-container">
       <NavLink to="/">
@@ -10,7 +11,7 @@ export default function Logo() {
           alt="logo"
         />
       </NavLink>
-      <button className="subscribeBtn">
+      <button className="subscribeBtn" onClick={() => navigate("/subscription")}>
         Subscribe
         <img
           className="greaterThanArrow"

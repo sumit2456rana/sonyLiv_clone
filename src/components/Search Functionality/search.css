@@ -23,9 +23,14 @@
     outline: none;
     border: none;
     border-radius: 30px;
+    font-weight: 500;
 }
 .input_container input::placeholder {
     font-family: "SFProText-Regular" , sans-serif;
+}
+.input_container input:disabled {
+    background-color: #fff;
+    font-weight: 700;
 }
 .categories_header {
     margin-top: 4.125rem;

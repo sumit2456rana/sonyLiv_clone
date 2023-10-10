@@ -62,19 +62,6 @@ function Movie() {
     }
   }
 
-  // async function getMovieFromWatchList() {
-  //   const url = "https://academics.newtonschool.co/api/v1/ott/watchlist/like";
-  //   const resp = await fetch(url, {
-  //     method: "GET",
-  //     headers: {
-  //       'Authorization': `Bearer ${userToken}`,
-  //       projectId: 'ub5yjy8wj6ez',
-  //     }
-  //   })
-  //   const data = await resp.json();
-  //   console.log(userToken);
-  //   console.log(data);
-  // }
 
 
   return (
@@ -123,8 +110,9 @@ function Movie() {
 };
 
 function SubscribeBtnMovie() {
+  const navigate = useNavigate();
   return (
-    <div className="subsBtnMovie">
+    <div className="subsBtnMovie" onClick={() => navigate("/subscription")}>
       <div className="left_subs">
         <img src="https://images.slivcdn.com/UI_icons/packWise/premium_icon.png?h=24&w=24&q=high&fr=webp" style={{ marginRight: "10px" }} />
         <span>Subscribe Now</span>

@@ -1,0 +1,229 @@
+.subscribePage {
+    min-height: 100vh;
+    background: rgb(21,21,21);
+    background: linear-gradient(360deg, rgba(21,21,21,1) 80%, rgba(21,21,21,0.6) 100%);
+    padding: 20px 50px;
+}
+
+.heading_container {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+    font-family: "SFProText-Regular" , sans-serif;
+}
+.logoImg {
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+}
+.number {
+    font-weight: 500;
+}
+.heading_subscribe {
+    font-family: "SFProText-Regular" , sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+.heading_subscribe h1 {
+    font-size: 1.625rem;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+.table_main_container {
+    display: flex;
+    justify-content: center;
+}
+.subscriptionTable {
+    color: #fff;
+    width: 77.625rem;
+    height: auto;
+    font-family: "SFProText-Regular" , sans-serif;
+    border: 1px solid rgba(204,204,204,0.5);
+    display: flex;
+    border-radius: 10px;
+}
+.table_fixed_col {
+    border-radius: 0px;
+    min-width: 285px;
+    max-width: 300px;
+    border: none;
+    position: relative;
+    z-index: 2;
+}
+.head_first_cell {
+    padding: 23px 10px 23px 20px;
+    border-right: 1px solid rgba(204,204,204,0.5);
+    width: 285px;
+    border-bottom: 1px solid rgba(204,204,204,0.5);
+    height: 100px;
+}
+.head_first_cell p {
+    font-size: 14px;
+}
+.head_first_cell h5 {
+    color: #FFC900;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.firstInfo {
+    padding: 10px 10px 10px 20px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(204,204,204,0.5);
+    font-size: 14px;
+}
+.first_cell {
+    border-right: 1px solid rgba(204,204,204,0.5);
+    width: 285px;
+}
+.firstInfo:nth-last-child(1) {
+    border-bottom: 0;
+}
+.infoIcon {
+    padding-left: 10px;
+}
+.infoIcon svg {
+    font-size: 20px;
+    color: #FFC900;
+}
+.plan_selection_main_container {
+    width: 100%;
+    display: flex;
+}
+.each_plan {
+    width: 25%;
+    height: auto;
+    border-right: 1px solid rgba(204,204,204,0.5);
+    cursor: pointer;
+    
+}
+div.each_plan:nth-last-child(1) {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.head {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgba(204,204,204,0.5);
+    
+}
+.head p {
+    font-size: 14px;
+}
+.price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFC900;
+}
+.outer_circle {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: relative;
+}
+.outer_circle input {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+.inner_circle {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.period {
+    font-size: 12px;
+}
+.subCells div {
+    padding: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(204,204,204,0.5);
+    font-size: 14px;
+}
+.subCells div:nth-last-child(1) {
+    border-bottom: 0;
+    font-size: 13px;
+}
+.maxAudQua span {
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+}
+/* .outer_circle input[type="radio"]:checked {
+
+} */
+.each_plan:nth-last-child(1) .head {
+    border-top-right-radius: 10px;
+
+}
+.selected {
+    .head {
+        background-color: #FFC900;
+        color: #000;
+    }
+    .price {
+        color: #000;
+    }
+    .subCells {
+        background-color: rgba(255,200,0,0.1);
+        border-right: 1px solid #FFC900;
+        border-left: 1px solid #FFC900;
+        border-bottom: 1px solid #FFC900;
+    }
+    .outer_circle {
+        border: 1px solid #000;
+    }
+    .inner_circle {
+        background-color: #000;
+    }
+}
+
+.bottomSection {
+    color: #fff;
+    font-family: "SFProText-Regular" , sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+.promo span{
+    border-bottom: 1px dashed #FFC900;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+.payBtn {
+    width: 32%;
+    height: 3rem;
+    margin: 20px;
+    border: none;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+.terms:hover {
+    text-decoration: underline;
+}
+.termsCond span {
+    cursor: pointer;
+}

@@ -1,0 +1,15 @@
+.pageNotFound {
+    min-height: 100vh;
+    background-color: #151515;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  font-family: "SFProText-Regular" , sans-serif;
+  padding-top: 100px;
+}
+.pageNotFound p {
+    font-size: 21px;
+    color: #aaa;
+    padding-top: 40px;
+}

@@ -43,7 +43,7 @@ function RightMenu({setShowLogOut}) {
                     {isLogin === true ? <UserHasLoggedIn nameOfUser={userDetail.name} userDetail={userDetail} /> : <UserHasNotLoggedIn />}
 
                 </li>
-                <AllData icon={"https://images.slivcdn.com/UI_icons/Subscribe_Now.png?h=22&w=22&q=high&fr=webp"} text={"Subscribe Now"} />
+                <NavLink style={{color: "white"}} to="/subscription"><AllData icon={"https://images.slivcdn.com/UI_icons/Subscribe_Now.png?h=22&w=22&q=high&fr=webp"} text={"Subscribe Now"} /></NavLink>
                 {isLogin && <NavLink style={{color: "white"}} to={"/usercenter/mylist"}><AllData icon={"https://images.slivcdn.com/UI_icons/mylist_non_selecte.png?h=22&w=22&q=high&fr=webp"} text={"My List"} /></NavLink>}
 
                 {data.map((each, idx) => {

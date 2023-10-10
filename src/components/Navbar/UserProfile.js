@@ -32,11 +32,11 @@ function UserProfile() {
             </div>
           </div>
         </div>
-        <div className="MyAccountMenuListWrapper" style={{ backgroundImage: "url(https://origin-staticv2.sonyliv.com/UI_icons/rail_bg.png)" }}>
+        <div className="MyAccountMenuListWrapper" onClick={() => navigate("/subscription")} style={{ backgroundImage: "url(https://origin-staticv2.sonyliv.com/UI_icons/rail_bg.png)" }}>
           <div>
             <img src="https://origin-staticv2.sonyliv.com/UI_icons/latest_premium_button.png" className="subs-icon" />
           </div>
-          <div className="premium-container" >
+          <div className="premium-container">
             <div className="watchPremium">To watch Premium videos</div>
             <div className="goPremium">Go Premium</div>
           </div>

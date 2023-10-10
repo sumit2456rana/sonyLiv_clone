@@ -12,12 +12,14 @@ import EditDetails from "./components/Navbar/EditDetails";
 import Movie from "./components/Listing Movies/Movie";
 import MyList from "./components/MyList/MyList";
 import SearchPage from "./components/Search Functionality/SearchPage";
+import SubscribePage from "./components/Subscribe/SubscripePage";
+import PageNotFound from "./components/Page Not Fount/PageNotFount";
 
 export default function App() {
   const location = useLocation();
 
   const isSearchPage = () => {
-    return location.pathname === "/search";
+    return location.pathname === "/search" || location.pathname === "/subscription";
   };
 
   return (
@@ -41,6 +43,8 @@ export default function App() {
           <Route path="/movies/:id" element={<Movie />} />
           <Route path="/usercenter/mylist" element={<MyList />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/subscription" element={<SubscribePage />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </AppContextProvider>
     </div>
