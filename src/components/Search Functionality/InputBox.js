@@ -1,14 +1,27 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { useNavigate } from "react-router-dom";
 function InputBox() {
+    const [query , setQuery] = useState("");
+
     const inputRef = useRef();
     const navigate = useNavigate();
     function handleClose() {
         navigate(-1);
     }
+    // async function getData() {
+    //     const url = `https://academics.newtonschool.co/api/v1/ott/show?search={"field" : "${query}"}`
+    //     const resp = await fetch(url , {
+    //         headers: {
+    //             "projectId" : "ub5yjy8wj6ez",
+    //         }
+    //     })
+    //     const data = await resp.json();
+    //     console.log(data);
+    // }
     useEffect(() => {
         inputRef.current.focus();
-    } , [])
+        // getData();
+    } , [query])
   return (
     <div>
         <div className="closeicon_container" onClick={handleClose}>
@@ -16,6 +29,7 @@ function InputBox() {
         </div>
         <div className="input_container">
             <input type="search" ref={inputRef} value={"Coming Soon...."} disabled placeholder="Search for movies, shows, sports etc." />
+            {/* <input type="search"  value={query} onChange={(e) => setQuery(e.target.value)}  placeholder="Search for movies, shows, sports etc." /> */}
         </div>  
     </div>
   )
