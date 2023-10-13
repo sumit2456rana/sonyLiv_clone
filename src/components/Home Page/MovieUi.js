@@ -1,27 +1,33 @@
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import PlayBtn from "./PlayBtn";
 import WestIcon from '@mui/icons-material/West';
 import EastIcon from '@mui/icons-material/East';
 function MovieUi({MovieDetails}) {
+    const carouselRef = useRef(null);
     const [show , setShow] = useState(false);
-    let carousel = document.querySelector(".movie-carousel")
     function btnNext() {
-        let width = window.innerWidth;
-        carousel.scrollLeft = carousel.scrollLeft + width;
+        let width = window?.innerWidth;
+        if (carouselRef.current) {
+            carouselRef.current.scrollLeft += width;
+        }
         console.log(width);
     }
+
     function btnPrev() {
         let width = window.innerWidth;
-        carousel.scrollLeft = carousel.scrollLeft - width;
+        if (carouselRef.current) {
+            carouselRef.current.scrollLeft -= width;
+        }
         console.log(width);
     }
   return (
     <div 
     className="movie-carousel"
+    ref={carouselRef}
     onMouseEnter={() => setShow(prev => !prev)} 
     onMouseLeave={() => setShow(prev => !prev)}
     >
-        {show  && <div className="arrow-container">
+        {show && <div className="arrow-container">
             <div className="left-arrow">
                 <button onClick={btnPrev}><WestIcon /></button>
             </div>

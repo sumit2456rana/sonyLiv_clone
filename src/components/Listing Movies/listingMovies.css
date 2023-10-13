@@ -21,9 +21,9 @@
     scroll-behavior: smooth;
 } */
 .movie-card {
-    min-width: 200px;
+    min-width: 10.625rem;
     max-width: 200px;
-    height: 300px;
+    height: 14.375rem;
     border-radius: 10px;
     background-size: cover;
     background-repeat: no-repeat;

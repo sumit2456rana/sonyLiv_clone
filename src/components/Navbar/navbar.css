@@ -1,6 +1,5 @@
-
 nav {
-  font-family: "SFProText-Regular" , sans-serif;
+  font-family: "SFProText-Regular", sans-serif;
   padding: 0px 40px;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -13,15 +12,25 @@ nav {
   backdrop-filter: blur(4px);
   z-index: 9999;
 }
+
+@media (max-width: 424px) {
+  nav {
+    padding: 0px 15px;
+  }
+  
+}
+
 .logo-container {
   display: flex;
   height: 100%;
   align-items: center;
 }
+
 .logo {
   width: 35px;
   height: 35px;
 }
+
 .subscribeBtn {
   display: flex;
   align-items: center;
@@ -36,14 +45,17 @@ nav {
   font-size: 13px;
   font-family: "SFProText-Regular";
 }
+
 .leftNavbar {
   display: flex;
   height: 100%;
   align-items: center;
 }
+
 .greaterThanArrow {
   padding-left: 8px;
 }
+
 .seperator-div {
   width: 1px;
   height: 24px;
@@ -51,44 +63,74 @@ nav {
   opacity: 0.3;
   margin-left: 24px;
 }
+
 .navigations {
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
   align-items: center;
+  display: flex;
+  overflow-y: scroll;
+  height: 100%;
+  width: calc(100vw - 30%);
 }
+
 .navigations a {
   text-decoration: none;
   color: #aaaaaa;
   padding: 0.8em 1em;
-  font-family: "SFProText-Regular" , sans-serif;
+  font-family: "SFProText-Regular", sans-serif;
   font-size: 14px;
   line-height: 26px;
- }
+  text-wrap: nowrap;
+}
+
 .navigations a:hover {
   color: #ffffff;
   border-bottom: 2px solid #ffffff;
 }
+
 .navigations {
   margin-right: 12rem;
 }
+
 a.active-links {
-    color: #ffffff;
-    border-bottom: 2px solid #ffffff;
-  }
-.rightNavBar {
-  display: flex;
-  justify-content: flex-end;
-  /* width: 19.2%; */
-  height: 100%;
-  align-items: center;
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
 }
+
+.rightNavBar {
+
+
+  align-items: center;
+  display: flex;
+  height: 100%;
+  position: fixed;
+  justify-content: flex-end;
+  right: 40px;
+}
+
+@media (max-width: 424px) {
+  .rightNavBar {
+    right: 15px;
+  }
+  .seperator-div {
+    margin-left: 10px; 
+  }
+  .navigations {
+    width: calc(100vw - 25%);
+  }
+}
+
+.navigations::-webkit-scrollbar {
+  display: none;
+}
+
 .search-container {
   margin-right: 30px;
 }
+
 .search-container svg {
   font-size: 2rem;
 }
+
 .search-icon {
   color: #fff;
   cursor: pointer;
@@ -113,6 +155,7 @@ a.active-links {
   color: #fff;
   border-bottom-left-radius: 10px;
 }
+
 .signIn-container {
   display: flex;
   padding: 5px 10px;
@@ -124,11 +167,13 @@ a.active-links {
   font-weight: 500;
   cursor: pointer;
 }
+
 .signIn-container:hover {
   background-color: #c3c3c3;
   color: #000;
   font-weight: 700;
 }
+
 .img-icon {
   height: 4.2rem;
   width: 4.2rem;
@@ -136,6 +181,7 @@ a.active-links {
   margin-top: 10px;
   opacity: 0.5;
 }
+
 .each-item {
   display: flex;
   justify-content: space-between;
@@ -147,14 +193,17 @@ a.active-links {
   cursor: pointer;
   font-weight: 500;
 }
+
 .each-item:hover {
   background-color: #c3c3c3;
   color: #000;
   font-weight: 700;
 }
+
 .each-item div img {
   padding: 0px 20px;
 }
+
 .right-menu ul li:nth-last-child(1) .each-item {
   border: none;
 }
@@ -162,7 +211,7 @@ a.active-links {
 .signin-page {
   width: 100vw;
   height: 100vh;
-  background-image: url("https://shorturl.at/kqKL8") , linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+  background-image: url("https://shorturl.at/kqKL8"), linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -172,18 +221,21 @@ a.active-links {
   color: #fff;
   /* background: linear-gradient(180deg , rgba(0,0,0,0.6) 90% , rgba(0,0,0,0.6) 90%); */
 }
+
 .form-container {
   height: 22rem;
   width: 25rem;
   background-color: rgba(0, 0, 0, 0.85);
-  font-family: "SFProText-Regular" , sans-serif;
+  font-family: "SFProText-Regular", sans-serif;
   padding: 30px 50px;
-  
+
 }
+
 .form-container h1 {
   font-size: 2rem;
   margin-bottom: 30px;
 }
+
 .inputs input {
   display: block;
   padding: 13px;
@@ -194,14 +246,16 @@ a.active-links {
   margin: 20px 0px;
   width: 100%;
   border-radius: 5px;
-  font-family: "SFProText-Regular" , sans-serif;
-  
+  font-family: "SFProText-Regular", sans-serif;
+
 }
+
 .inputs input::placeholder {
   color: #8f8f8f;
-  font-family: "SFProText-Regular" , sans-serif;
+  font-family: "SFProText-Regular", sans-serif;
   font-weight: 400;
 }
+
 .submit-btn {
   display: flex;
   justify-content: center;
@@ -214,22 +268,26 @@ a.active-links {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-family: "SFProText-Regular" , sans-serif;
+  font-family: "SFProText-Regular", sans-serif;
   font-weight: 600;
   margin-top: 10px;
 }
+
 .notRegister {
   font-size: 1rem;
   margin-top: 20px;
   color: #8f8f8f;
 }
+
 .notRegister a {
   text-decoration: none;
   color: #fff;
 }
+
 .notRegister a:hover {
   text-decoration: underline;
 }
+
 .googleImg {
   width: 30px;
   height: 30px;
@@ -245,8 +303,9 @@ a.active-links {
   font-weight: 600;
   font-size: 0.9rem;
 }
+
 .error-input {
-  margin-bottom: 0px !important; 
+  margin-bottom: 0px !important;
 }
 
 .myaccount-container {
@@ -257,15 +316,18 @@ a.active-links {
   background-color: #151515;
   color: #fff;
 }
+
 .heading {
   text-align: center;
 }
+
 .heading h2 {
-  font-family: "SFProText-Regular" , sans-serif;
+  font-family: "SFProText-Regular", sans-serif;
   letter-spacing: 0.75px;
   font-size: 1.4rem;
   font-weight: 700;
 }
+
 .myAccountProfile {
   width: 350px;
   margin-top: 1.5rem;
@@ -276,37 +338,44 @@ a.active-links {
   text-align: center;
   border-radius: 10px;
 }
+
 .profile-img {
   width: 60px;
   height: 60px;
   border-radius: 8px;
   opacity: 0.5;
 }
+
 .user-name {
   color: #aaa;
   padding-top: 0.3rem;
-  font-family: "SFProText-Regular" , sans-serif;
+  font-family: "SFProText-Regular", sans-serif;
   font-weight: 400;
 }
+
 .editDetails {
   margin-top: 0.7rem;
 }
+
 .editDetails p {
   display: flex;
   height: auto;
   align-items: center;
   font-size: 1rem;
   font-weight: 500;
-  font-family: "SFProText-Regular" , sans-serif;
+  font-family: "SFProText-Regular", sans-serif;
 }
+
 .editDetails a {
   text-decoration: none;
   color: #fff;
 }
+
 .pencil-icon svg {
   font-size: 1rem;
   margin-right: 0.5rem;
 }
+
 .MyAccountMenuListWrapper {
   display: flex;
   justify-content: space-evenly;
@@ -320,29 +389,35 @@ a.active-links {
   cursor: pointer;
   background-size: cover;
 }
+
 .subs-icon {
   height: 1.5rem;
   width: 1.5rem;
 }
+
 .premium-container {
   margin-right: 3rem;
-  font-family: "SFProText-Regular" , sans-serif;
+  font-family: "SFProText-Regular", sans-serif;
 }
+
 .watchPremium {
   font-size: 0.8rem;
 }
-.arrow-icon svg{
+
+.arrow-icon svg {
   font-size: 2.2rem;
 }
+
 .myAccEachMenuList {
   display: flex;
   width: 100%;
   border-top: 2px solid #252525;
-  font-family: "SFProText-Regular" , sans-serif;
+  font-family: "SFProText-Regular", sans-serif;
   padding: 18px 0px;
   font-size: 0.8rem;
-  cursor: pointer ;
+  cursor: pointer;
 }
+
 .menuListIcon {
   width: 1.125rem;
   height: 1.125rem;
@@ -350,18 +425,20 @@ a.active-links {
 }
 
 .successFullPage {
-  position: fixed; 
-  z-index: 1; 
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100vh; 
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8);
 }
+
 .success-content {
   width: 35%;
   height: auto;
@@ -372,21 +449,25 @@ a.active-links {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: "SFProText-Regular" , sans-serif;
+  font-family: "SFProText-Regular", sans-serif;
   position: relative;
 }
-.success-content > p {
+
+.success-content>p {
   font-size: 1.2rem;
 }
+
 .successText {
   margin-top: 60px;
   color: #fff;
 }
+
 .email {
-  color: yellow;  
+  color: yellow;
   font-size: 1.2rem;
   padding-top: 10px;
 }
+
 .checkIcon {
   height: 30px;
   width: 30px;
@@ -397,8 +478,9 @@ a.active-links {
   border-radius: 50%;
   background-color: #21BD5C;
 }
+
 .noActiveSubs {
-  background-color: #67373e ;
+  background-color: #67373e;
   /* opacity: 0; */
   font-size: 0.8rem !important;
   border: 1px solid #c93a3c;
@@ -407,11 +489,13 @@ a.active-links {
   color: #fff;
   border-radius: 5px;
 }
+
 .btnContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .contBtn {
   display: flex;
   align-items: center;
@@ -426,7 +510,7 @@ a.active-links {
 }
 
 .editDetailsPage {
-  font-family: "SFProText-Regular" , sans-serif;
+  font-family: "SFProText-Regular", sans-serif;
   background-color: #151515;
   height: 100vh;
   display: flex;
@@ -434,6 +518,7 @@ a.active-links {
   align-items: center;
   color: #fff;
 }
+
 .wrapper {
   width: 40%;
   display: flex;
@@ -441,22 +526,28 @@ a.active-links {
   justify-content: center;
   align-items: center;
 }
+
 .edit_details_heading {
   font-size: 1.5rem;
   font-weight: 700;
 }
+
 .editDetails_form {
   width: 100%;
 }
-.editDetails_form label , .editDetails_form input {
+
+.editDetails_form label,
+.editDetails_form input {
   display: block;
 }
+
 .editDetails_form label {
   font-size: 1rem;
   color: #aaaaaa;
   margin-top: 40px;
   font-weight: 500;
 }
+
 .editDetails_form input {
   margin-top: .8125rem;
   background-color: #151515;
@@ -467,14 +558,18 @@ a.active-links {
   width: 100%;
   padding: 5px 2px;
 }
+
 .input_wrapper {
   border-bottom: 1.5px solid #ffd900 !important;
 }
+
 .input_wrapper_editable {
   border-bottom: 1.5px solid #fff !important;
 }
-.wantToUpPass label , .wantToUpPass input {
-  display: inline;  
+
+.wantToUpPass label,
+.wantToUpPass input {
+  display: inline;
   width: auto;
   margin-top: 40px;
   padding: 10px;
@@ -493,21 +588,23 @@ a.active-links {
   font-size: 20px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  font-family: "SFProText-Regular" , sans-serif;
+  font-family: "SFProText-Regular", sans-serif;
 
 }
 
-.successMsgContainer div  {
+.successMsgContainer div {
   margin-top: 50px;
   margin-bottom: 20px;
 }
+
 .closeIcon2 {
   position: absolute;
   right: 20px;
   top: -30px;
-  
+
   cursor: pointer;
 }
+
 .closeIcon2 svg {
   color: #fff;
   font-size: 2rem;
@@ -526,6 +623,7 @@ a.active-links {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
