@@ -5,8 +5,8 @@ import { NavLink } from "react-router-dom";
 
 function Carousel({ heading, movieList, class1 }) {
 
-    const [showNextBtn, setShowNextBtn] = useState(false);
-    const [showPrevBtn, setShowPrevBtn] = useState(false);
+    const [showBtn, setShowBtn] = useState(false);
+    // const [showPrevBtn, setShowPrevBtn] = useState(false);
 
     const container = document.querySelector(`.${class1}`);
     function btnLeft() {
@@ -26,8 +26,7 @@ function Carousel({ heading, movieList, class1 }) {
     }
     useEffect(() => {
         if(window.innerWidth <= 1000){
-            setShowNextBtn(true)
-            setShowPrevBtn(true)
+            setShowBtn(true)
         }
     } , [window.innerWidth]) 
     return (
@@ -35,21 +34,19 @@ function Carousel({ heading, movieList, class1 }) {
 
             onMouseEnter={() => {
                 if (window.innerWidth >= 1000)
-                    setShowNextBtn(true)
-                    setShowPrevBtn(true)
+                    setShowBtn(true);
             }
             }
             onMouseLeave={() => {
                 if (window.innerWidth >= 1000)
-                    setShowNextBtn(false);
-                    setShowPrevBtn(false);
+                    setShowBtn(false);
             }}
 
         >
             <h3>{heading}</h3>
 
-            {showPrevBtn && <button className="pre-btn" onClick={btnLeft}><WestIcon /></button>}
-            {showNextBtn && <button className="next-btn" onClick={btnRight}><EastIcon /></button>}
+            {showBtn && <button className="pre-btn" onClick={btnLeft}><WestIcon /></button>}
+            {showBtn && <button className="next-btn" onClick={btnRight}><EastIcon /></button>}
 
             <div className={class1} style={style}>
                 {movieList?.map((eMovie, idx) => (

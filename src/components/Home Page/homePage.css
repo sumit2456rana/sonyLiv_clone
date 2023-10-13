@@ -118,8 +118,7 @@ svg.shareIcon {
 
 @media (max-width: 424px) {
     .posterImg {
-        height: 35vh !important;
-        min-height: 0;
+        height: 40vh;
     }
 
     .genre {
@@ -131,13 +130,6 @@ svg.shareIcon {
     .left-genre {
         margin-right: 0;
     }
-
-    .play-btn {
-        width: 140px;
-        height: 40px;
-        font-size: 13px;
-    }
-
     .titleImg {
         display: none;
     }
@@ -157,13 +149,13 @@ svg.shareIcon {
 
     .genre {
         padding-bottom: 0;
-        font-size: 15px;
+        font-size: 13px;
         display: block;
     }
 
     .play-btn {
         width: 140px;
-        height: 45px;
-        font-size: 17px;
+        height: 40px;
+        font-size: 13px;
     }
 }
