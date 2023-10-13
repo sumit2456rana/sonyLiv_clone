@@ -66,7 +66,26 @@
     cursor: pointer;
     padding: 10px;
 }
-
+.main_movies_cont{
+    display: flex;
+    overflow-x: scroll;
+    padding-left: 50px;
+    scroll-behavior: smooth;
+}
+.main_movies_cont::-webkit-scrollbar {
+    display: none;
+}
+@media (max-width: 1000px) {
+    .next-btn svg, .pre-btn svg {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .main_movies_cont {
+        padding-left: 15px;
+    }
+    .carousel-container h3 {
+        padding-left: 25px;
+    }
+}
 .movieGradientDiv {
     width: 100%;
     height: 100vh;

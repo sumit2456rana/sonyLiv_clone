@@ -18,15 +18,9 @@ function Carousel({ heading, movieList, class1 }) {
         container.scrollLeft = container.scrollLeft + width;
 
     }
-    let style = {
-        display: "flex",
-        overflowX: "hidden",
-        paddingLeft: "50px",
-        scrollBehavior: "smooth",
-    }
     useEffect(() => {
         if(window.innerWidth <= 1000){
-            setShowBtn(true)
+            setShowBtn(false)
         }
     } , [window.innerWidth]) 
     return (
@@ -48,7 +42,7 @@ function Carousel({ heading, movieList, class1 }) {
             {showBtn && <button className="pre-btn" onClick={btnLeft}><WestIcon /></button>}
             {showBtn && <button className="next-btn" onClick={btnRight}><EastIcon /></button>}
 
-            <div className={class1} style={style}>
+            <div className={`${class1} main_movies_cont`}>
                 {movieList?.map((eMovie, idx) => (
                     <EachMovieCard key={idx} eMovie={eMovie} />
                 ))}
