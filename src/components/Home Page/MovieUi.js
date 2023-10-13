@@ -20,13 +20,20 @@ function MovieUi({MovieDetails}) {
         }
         console.log(width);
     }
+    useEffect(() => {
+        if(window.innerWidth <= 1000){
+        setShow(true);
+    }
+    } , [window.innerWidth]) 
+    
   return (
     <div 
     className="movie-carousel"
     ref={carouselRef}
-    onMouseEnter={() => setShow(prev => !prev)} 
-    onMouseLeave={() => setShow(prev => !prev)}
+    onMouseEnter={() => {if(window.innerWidth >= 1000)  setShow(true)}} 
+    onMouseLeave={() => {if(window.innerWidth >= 1000) setShow(false)}}
     >
+        
         {show && <div className="arrow-container">
             <div className="left-arrow">
                 <button onClick={btnPrev}><WestIcon /></button>

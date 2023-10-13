@@ -3,7 +3,7 @@
 .posterImg {
     width: 100vw;
     height: auto;
-    min-height: 50vh;
+    min-height: 40vh;
 }
 
 .container {
@@ -118,7 +118,8 @@ svg.shareIcon {
 
 @media (max-width: 424px) {
     .posterImg {
-        height: 50vh;
+        height: 35vh !important;
+        min-height: 0;
     }
 
     .genre {
