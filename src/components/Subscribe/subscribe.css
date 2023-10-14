@@ -227,3 +227,64 @@ div.each_plan:nth-last-child(1) {
 .termsCond span {
     cursor: pointer;
 }
+
+@media (max-width : 424px) {
+    .table_fixed_col {
+        min-width: 138px;
+    }
+    .head_first_cell {
+        width: 138px;
+        height: 85px;
+    }
+    .head_first_cell h5 {
+        font-size: 12px;
+    }
+    .head_first_cell p {
+        font-size: 10px;
+    }
+    .first_cell {
+        width: 138px;
+    }
+    .firstInfo {
+        font-size: 8px;
+    }
+    .infoIcon svg {
+        font-size: 15px;
+    }
+    .head {
+        height: 85px;
+    }
+    .outer_circle {
+        width: 10px;
+        height: 10px;
+    }
+    .inner_circle{ 
+        width: 6px;
+        height: 6px;
+    }
+    .head p  {
+        font-size: 6px;
+    }
+    .price {
+        font-size: 9px;
+    }
+    .period {
+        font-size: 4px;
+    }
+    .subCells div {
+        font-size: 7px;
+    }
+    .subCells div:nth-last-child(1) {
+        font-size: 5px;
+    }
+    .payBtn {
+        width: 85%;
+    }
+    .heading_subscribe h1  {
+        font-size: 1.1rem;
+    }
+    .logoImg {
+        width: 30px;
+        height: 21px;
+    }
+}
