@@ -230,23 +230,26 @@ div.each_plan:nth-last-child(1) {
 
 @media (max-width : 424px) {
     .table_fixed_col {
-        min-width: 138px;
+        min-width: 129px;
     }
     .head_first_cell {
-        width: 138px;
+        width: 129px;
         height: 85px;
+        padding: 23px 7px;
     }
     .head_first_cell h5 {
         font-size: 12px;
     }
     .head_first_cell p {
         font-size: 10px;
+
     }
     .first_cell {
-        width: 138px;
+        width: 129px;
     }
     .firstInfo {
         font-size: 8px;
+        padding: 10px 8px;
     }
     .infoIcon svg {
         font-size: 15px;
