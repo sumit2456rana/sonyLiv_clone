@@ -17,7 +17,7 @@ nav {
   nav {
     padding: 0px 15px;
   }
-  
+
 }
 
 .logo-container {
@@ -111,9 +111,11 @@ a.active-links {
   .rightNavBar {
     right: 15px;
   }
+
   .seperator-div {
-    margin-left: 10px; 
+    margin-left: 10px;
   }
+
   .navigations {
     width: calc(100vw - 25%);
   }
@@ -628,29 +630,44 @@ a.active-links {
     transform: rotate(360deg);
   }
 }
+
 .subs_watch_btn {
   display: flex;
   margin-top: 25px;
-  
+
 }
+
 @media (max-width: 424px) {
   .form-container {
     width: 20.5rem;
   }
+
   .success-content {
     width: 75%;
   }
+
   .success-content>p {
     font-size: 0.9rem;
   }
+
   .contBtn {
     font-size: 12px;
   }
+
   .wrapper {
     width: 75%;
   }
+
   .successMsgContainer {
     font-size: 14px;
   }
-  
+
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .subscribeBtn {
+    font-size: 10px;
+  }
 }

@@ -119,8 +119,15 @@ svg.shareIcon {
 @media (max-width: 424px) {
     .posterImg {
         height: 40vh;
+        width: 99vw;
     }
-
+    .css-i4bv87-MuiSvgIcon-root {
+        font-size: 1rem;
+    }
+    .arrow-container button {
+        width: 30px;
+        height: 30px;
+    }
     .genre {
         display: block;
         padding-bottom: 0;
