@@ -87,7 +87,7 @@ function Movie() {
             <p><span style={{ color: "rgba(255,255,255,0.6)" }}>Director:</span> {movieData.director}</p>
             <p><span style={{ color: "rgba(255,255,255,0.6)" }}>Cast:</span> {movieData.cast?.join(", ")}</p>
           </div>
-          <div style={{ display: "flex", marginTop: "25px" }}>
+          <div className="subs_watch_btn">
             <WatchFreePreview video_url={movieData.video_url} />
             <SubscribeBtnMovie />
           </div>

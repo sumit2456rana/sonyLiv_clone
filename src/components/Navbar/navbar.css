@@ -147,7 +147,7 @@ a.active-links {
   height: 19rem;
   width: 16rem;
   position: absolute;
-  right: 20px;
+  right: 0px;
   background-color: rgba(0, 0, 0, 0.6);
   margin-top: 4px;
   overflow: scroll;
@@ -440,7 +440,7 @@ a.active-links {
 }
 
 .success-content {
-  width: 35%;
+  width: 45%;
   height: auto;
   padding: 20px;
   background-color: #323E4A;
@@ -500,7 +500,7 @@ a.active-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 45%;
   height: 2.5rem;
   margin-top: 30px;
   border: none;
@@ -627,4 +627,30 @@ a.active-links {
   100% {
     transform: rotate(360deg);
   }
+}
+.subs_watch_btn {
+  display: flex;
+  margin-top: 25px;
+  
+}
+@media (max-width: 424px) {
+  .form-container {
+    width: 20.5rem;
+  }
+  .success-content {
+    width: 75%;
+  }
+  .success-content>p {
+    font-size: 0.9rem;
+  }
+  .contBtn {
+    font-size: 12px;
+  }
+  .wrapper {
+    width: 75%;
+  }
+  .successMsgContainer {
+    font-size: 14px;
+  }
+  
 }

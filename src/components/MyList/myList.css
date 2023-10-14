@@ -121,3 +121,20 @@ svg.editIcon {
 .delete svg {
     font-size: 3rem;
 }
+
+@media (max-width : 424px) {
+    .myList {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .watchlist_header > p, .interest_header > p {
+        font-size: 0.9rem;
+    }
+    .nothing_interest {
+        font-size: 18px;
+    }
+    .plus_icon {
+        width: 55px;
+        height: 55px;
+    }
+}
