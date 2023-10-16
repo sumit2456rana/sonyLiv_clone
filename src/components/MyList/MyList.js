@@ -1,12 +1,22 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import "./myList.css";
 import WatchList from "./WatchList";
 import Interest from "./Interest";
 import BorderColorIcon from '@mui/icons-material/BorderColor';
+import { usePostProvider } from "../AppContextProvider";
+import { useNavigate } from "react-router-dom";
 function MyList() {
+    const {isLogin} = usePostProvider();
+    const navigate = useNavigate();
     const [selected , setSelected] = useState("watchlist");
     const [isEditing , setIsEditing] = useState(false);
     const [movieLength , setMovieLength] = useState();
+
+    useEffect(() => {
+        if(!isLogin) {
+          navigate("/signin") ;
+        }
+      } , [])
   return (
     <div className="myList">
         <div className="mylist_header">

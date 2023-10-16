@@ -120,13 +120,17 @@ svg.shareIcon {
     .posterImg {
         height: 40vh;
     }
-    .right-arrow button svg , .left-arrow button svg {
+
+    .right-arrow button svg,
+    .left-arrow button svg {
         font-size: 1rem;
     }
+
     .arrow-container button {
         width: 30px;
         height: 30px;
     }
+
     .genre {
         display: block;
         padding-bottom: 0;
@@ -136,6 +140,7 @@ svg.shareIcon {
     .left-genre {
         margin-right: 0;
     }
+
     .titleImg {
         display: none;
     }
@@ -145,7 +150,7 @@ svg.shareIcon {
     .titleImg {
         display: none;
     }
-    
+
 }
 
 @media (max-width : 1000px) {
@@ -165,3 +170,6 @@ svg.shareIcon {
         font-size: 13px;
     }
 }
+
+
+  

@@ -116,10 +116,10 @@ function Register() {
           <div>
             <button className="submit-btn">{isLoading ? <Loader /> : "Sign Up"}</button>
           </div>
-          <div style={{ textAlign: "center", marginTop: "20px" }}>
+          {/* <div style={{ textAlign: "center", marginTop: "20px" }}>
             <img className="googleImg" src="google.256x256.png" />
             <img className="googleImg" src="github.256x244.png" />
-          </div>
+          </div> */}
           <div className="notRegister">
             <p>Already have an account? <NavLink to="/signin">Login</NavLink> </p>
           </div>

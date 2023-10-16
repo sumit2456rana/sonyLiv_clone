@@ -2,9 +2,11 @@ import React, { useEffect, useRef, useState } from "react"
 import PlayBtn from "./PlayBtn";
 import WestIcon from '@mui/icons-material/West';
 import EastIcon from '@mui/icons-material/East';
+import ComingSoon from "../Coming Soon/ComingSoon";
 function MovieUi({MovieDetails}) {
     const carouselRef = useRef(null);
     const [show , setShow] = useState(false);
+    const [showComingSoon , setShowComingSoon] =useState(false);
     function btnNext() {
         let width = window?.innerWidth;
         if (carouselRef.current) {
@@ -25,8 +27,12 @@ function MovieUi({MovieDetails}) {
         setShow(true);
     }
     } , [window.innerWidth]) 
-    
+    function handleShowComingSoon(val) {
+        setShowComingSoon(val);
+    }
   return (
+    <>
+    {showComingSoon && <ComingSoon show={true} />}
     <div 
     className="movie-carousel"
     ref={carouselRef}
@@ -60,7 +66,7 @@ function MovieUi({MovieDetails}) {
                                     {each.realesed === "" ? "" : (<><span className="dot">&bull;</span>{each.realesed}</>)}
                                 </p>
                                 <div>
-                                    <PlayBtn />
+                                    <PlayBtn handleShowComingSoon={handleShowComingSoon} />
                                 </div>
                             </div>
                             <div style={{visibility: "hidden"}}>
@@ -73,6 +79,7 @@ function MovieUi({MovieDetails}) {
             )
         })}
     </div>
+    </>
   )
 };
 

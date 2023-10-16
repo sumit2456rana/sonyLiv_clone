@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined';
 import KeyboardArrowRightOutlinedIcon from '@mui/icons-material/KeyboardArrowRightOutlined';
 import { NavLink, useNavigate } from "react-router-dom";
@@ -16,7 +16,11 @@ function UserProfile() {
   function handleOnClick() {
     navigate("/");
   }
-  console.log(userDetail);
+  useEffect(() => {
+    if(!isLogin) {
+      navigate("/signin") ;
+    }
+  } , [])
   return (
     <div className="myaccount-container">
       <div>
@@ -70,3 +74,4 @@ function UserProfile() {
 };
 
 export default UserProfile;
+

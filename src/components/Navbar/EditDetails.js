@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { usePostProvider } from "../AppContextProvider";
 import ShowSuccessMsg from "./ShowSuccessMsg";
 import { useNavigate } from "react-router-dom";
@@ -9,7 +9,7 @@ function EditDetails() {
     const [isChecked, setIsChecked] = useState(false);
     const [currPassword, setCurrPassword] = useState("");
     const [newPassword, setNewPassword] = useState("");
-    const { userDetail, userToken } = usePostProvider();
+    const {isLogin, userDetail, userToken } = usePostProvider();
     const [errMsg, setErrorMsg] = useState("");
     const [showSuccessMsg , setShowSuccessMsg] = useState(false);
     const fileInputRef = useRef();
@@ -115,7 +115,11 @@ function EditDetails() {
         setShowSuccessMsg(false);
         navigate("/myaccount");
     }
-
+    useEffect(() => {
+        if(!isLogin) {
+          navigate("/signin") ;
+        }
+      } , [])
     return (
         <div className="editDetailsPage">
             <div className="wrapper">

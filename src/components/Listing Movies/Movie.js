@@ -6,25 +6,40 @@ import { useAsyncError, useNavigate, useParams } from "react-router-dom";
 import WatchFreePreview from "./WatchFreePreview";
 import ShowSuccessMsg from "../Navbar/ShowSuccessMsg";
 import { usePostProvider } from "../AppContextProvider";
+import Loader from "../Navbar/Loader";
+import Share from "./Share";
 function Movie() {
   const [movieData, setMovieData] = useState({});
   const { userToken, isLogin } = usePostProvider();
   const [showAddedToList, setShowAddedToList] = useState(false);
   const [showDoneIcon, setShowDoneIcon] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [shareMovie , setShareMovie] = useState(false);
   const [msg, setMsg] = useState("");
   const navigate = useNavigate();
   const params = useParams();
   const id = params.id;
   async function fetchData() {
-    const resp = await fetch(`https://academics.newtonschool.co/api/v1/ott/show/${id}`, {
-      method: "GET",
-      headers: {
-        projectId: 'ub5yjy8wj6ez',
-      }
-    });
-    const data = await resp.json();
-    setMovieData(data.data);
-    console.log(data.data);
+    try {
+      setIsLoading(true);
+      const resp = await fetch(`https://academics.newtonschool.co/api/v1/ott/show/${id}`, {
+        method: "GET",
+        headers: {
+          projectId: 'ub5yjy8wj6ez',
+        }
+      });
+      const data = await resp.json();
+      setMovieData(data.data);
+    }
+    catch (err) {
+      console.log(err);
+    }
+    finally {
+      setTimeout(() => {
+        setIsLoading(false);
+      } , 1000)
+    }
+    
   }
   useEffect(() => {
     fetchData();
@@ -35,8 +50,8 @@ function Movie() {
       addMovieToList();
       setTimeout(() => {
         setShowAddedToList(false);
-      } , 3000);
-    }else {
+      }, 3000);
+    } else {
       navigate("/signin")
     }
   }
@@ -55,7 +70,7 @@ function Movie() {
       })
     })
     const data = await resp.json();
-    console.log(data);
+    // console.log(data);
     if (data.status === 'success') {
       setShowAddedToList(true);
       setMsg(data.message);
@@ -66,7 +81,7 @@ function Movie() {
 
   return (
     <div>
-      <div className="movieGradientDiv">
+      {isLoading ? <div className="loader_container"><Loader /></div> : <div className="movieGradientDiv">
         <div className="movie_left_side">
           <div>
             <h1><img src="https://images.slivcdn.com/UI_icons/packWise/premium_icon.png?h=24&w=24&q=high&fr=webp" style={{ marginRight: "10px" }} />{movieData.title}</h1>
@@ -96,14 +111,15 @@ function Movie() {
               <button onClick={() => handleMyListBtn()}><span style={{ paddingRight: "5px" }}>{showDoneIcon ? <DoneIcon /> : <AddIcon />}</span>My List</button>
             </div>
             <div className="addToMyListBtn">
-              <button><span style={{ paddingRight: "5px" }}>{<ReplyIcon />}</span>Share</button>
+              <button onClick={() => setShareMovie(true)}><span style={{ paddingRight: "5px" }}>{<ReplyIcon />}</span>Share</button>
             </div>
           </div>
         </div>
         <div className="movie_right_side">
           <img src={movieData.thumbnail} />
         </div>
-      </div>
+      </div>}
+      {shareMovie && <Share title={movieData.title} link={window.location.href} setCloseModal={setShareMovie} />}
       {showAddedToList && <ShowSuccessMsg text={msg} handleOnClick={() => setShowAddedToList(false)} />}
     </div>
   )

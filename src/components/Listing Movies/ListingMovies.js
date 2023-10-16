@@ -43,7 +43,6 @@ function ListingMovies() {
     fetchShows();
   }, []);
   const movieChunks = chunkArray(movie, 20);
-  console.log(movieChunks);
   return (
     <div className="main">
         {/* Carousel Component */}

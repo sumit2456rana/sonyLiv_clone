@@ -209,6 +209,7 @@ div.each_plan:nth-last-child(1) {
     border-bottom: 1px dashed #FFC900;
     font-size: 14px;
     padding-bottom: 5px;
+    cursor: pointer;
 }
 .payBtn {
     width: 32%;

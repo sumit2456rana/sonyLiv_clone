@@ -1,13 +1,23 @@
-import React from "react"
+import React, { useState } from "react"
+import ComingSoon from "../Coming Soon/ComingSoon";
 
 function BottomSection({price}) {
+  const [comingSoon , setComingSoon] = useState(false)
+  function handlePay() {
+    setComingSoon(true);
+
+    setTimeout(() => {
+      setComingSoon(false);
+    } , 3000)
+  }
   return (
     <div className="bottomSection">
+      {comingSoon && <ComingSoon show={comingSoon} />}
       <div className="promo">
-        <span >Select a promo code</span>
+        <span onClick={handlePay}>Select a promo code</span>
       </div>
       <div>
-        <button className="payBtn">Pay &#8377;{price}</button>
+        <button className="payBtn" onClick={handlePay}>Pay &#8377;{price}</button>
       </div>
       <div className="termsCond">
         <span className="terms">Terms and Conditions</span>
