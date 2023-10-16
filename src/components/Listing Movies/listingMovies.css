@@ -398,4 +398,7 @@
     .movie_right_side {
         margin-top: 0;
     }
+    .shareMovieLink {
+        width: 100%;
+    }
 }
