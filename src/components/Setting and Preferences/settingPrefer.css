@@ -1,0 +1,248 @@
+.settings {
+    padding: 5.5rem 0px;
+    align-items: flex-start;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 57px;
+    height: 29px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #212121;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 1.2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+
+.settings_all {
+    margin-top: 40px;
+    width: 100%;
+    min-width: 575px;
+    padding: 0 10px;
+}
+
+.settings_all>li {
+    border-bottom: 1px solid #252525;
+}
+
+.settings_all>li:nth-last-child(1) {
+    border-bottom: 0;
+}
+
+.each_setting {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.option-icon {
+    display: flex;
+    align-items: center;
+
+}
+
+.option-icon div img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.getStarted {
+    color: #808088;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal-dialog {
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    max-width: 900px;
+    margin: 0px auto;
+    background-image: linear-gradient(117deg, #485563 2%, #29323c 99%);
+    z-index: 2;
+    border-radius: 20px 20px 0px 0px;
+}
+.modal-header {
+    margin-top: -45px;
+    position: absolute;
+    right: 0;
+
+}
+.modal-header svg {
+    cursor: pointer;
+    font-size: 2rem;
+}
+.modal-body {
+    padding: 40px 0px;
+    margin-top: 0px;
+}
+.headFlexBox {
+    display: flex;
+    align-items: baseline;
+    padding: 0px 62px;
+}
+
+.headFlexBox h2 {
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 27px;
+}
+.headFlexBox h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4);
+}
+.languageGridContainer{ 
+    padding: 25px 62px;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 15px;
+}
+.eachLang {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out transform;
+    position: relative;
+    cursor: pointer;
+}
+.eachLang:hover {
+    transform: scale(1.1);
+}
+.checkIcon_container {
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+}
+.checkIcon_container svg {
+    color: rgba(255, 255, 255, 0.3);
+}
+.languages {
+    text-align: center;
+}
+.langTitle {
+    padding: 5px 0px;
+}
+.engTitle {
+    padding: 0px 5px;
+    text-transform: uppercase;
+}
+.saveBtnContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 62px;
+}
+.saveBtnContainer button {
+    min-width: 130px;
+    height: 2.2rem;
+    background-color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.saveBtnContainer button:disabled {
+    opacity: 0.2;
+}
+.seletedLanguage {
+    border: 2px solid #ffc900;
+
+    .checkIcon_container svg {
+        color: #ffc900;
+    }
+}
+
+@media (max-width : 424px) {
+    .eachLang {
+        width: 140px;
+        height: 65px;
+    }
+    .languageGridContainer {
+        padding: 10px;
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    .headFlexBox {
+        padding: 0px 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .headFlexBox h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .headFlexBox h4 {
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    .saveBtnContainer {
+        padding: 0px 15px;
+    }
+    .checkIcon_container svg {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width : 750px) {
+    .languageGridContainer {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}

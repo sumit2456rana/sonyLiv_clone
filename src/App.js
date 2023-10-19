@@ -14,6 +14,8 @@ import MyList from "./components/MyList/MyList";
 import SearchPage from "./components/Search Functionality/SearchPage";
 import SubscribePage from "./components/Subscribe/SubscripePage";
 import PageNotFound from "./components/Page Not Fount/PageNotFount";
+import SettingPreferences from "./components/Setting and Preferences/SettingPreferences";
+import ActivateOffer from "./components/Activate Offer/AcitvateOffer";
 
 export default function App() {
   const location = useLocation();
@@ -45,6 +47,8 @@ export default function App() {
           <Route path="/search" element={<SearchPage />} />
           <Route path="/subscription" element={<SubscribePage />} />
           <Route path="*" element={<PageNotFound />} />
+          <Route path="/setting-preferences" element={<SettingPreferences />} />
+          <Route path="/activate_offers" element={<ActivateOffer />} />
         </Routes>
       </AppContextProvider>
     </div>

@@ -1,29 +1,15 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { usePostProvider } from "../AppContextProvider";
-import SuccesFullPage from "./SuccessFullPage";
 const data = [
     {
         icon: "https://images.slivcdn.com/UI_icons/New_Final_Icons_30052020/ActivateTV3x.png?h=22&w=22&q=high&fr=webp",
         text: "Activate Tv",
     },
     {
-        icon: "https://images.slivcdn.com/UI_icons/settings_icon.png?h=22&w=22&q=high&fr=webp",
-        text: "Setting & Preferences",
-    },
-    {
         icon: "https://images.slivcdn.com/UI_icons/paymentscreenicons/Contact_Us_New_Icon3x.png?h=22&w=22&q=high&fr=webp",
         text: "Contact Us",
     },
-    {
-        icon: "https://images.slivcdn.com/UI_icons/New_Final_Icons_30052020/WhatsApp_icon_2x.png?h=22&w=22&q=high&fr=webp",
-        text: "Chat with us on WhatsApp",
-    },
-    {
-        icon: "https://images-preprod.slivcdn.com/activate/offer.png?h=22&w=22&q=high&fr=webp",
-        text: "Activate Offer",
-    },
-
 
 ]
 
@@ -45,12 +31,23 @@ function RightMenu({setShowLogOut}) {
                 </li>   
                 <NavLink style={{color: "white"}} to="/subscription"><AllData icon={"https://images.slivcdn.com/UI_icons/Subscribe_Now.png?h=22&w=22&q=high&fr=webp"} text={"Subscribe Now"} /></NavLink>
                 {isLogin && <NavLink style={{color: "white"}} to={"/usercenter/mylist"}><AllData icon={"https://images.slivcdn.com/UI_icons/mylist_non_selecte.png?h=22&w=22&q=high&fr=webp"} text={"My List"} /></NavLink>}
+                
+                <NavLink style={{color: "white"}} to={"/setting-preferences"}>
+                        <AllData icon={"https://images.slivcdn.com/UI_icons/settings_icon.png?h=22&w=22&q=high&fr=webp"} text={"Setting & Preferences"} />
+                </NavLink>
 
-                {data.map((each, idx) => {
+                <NavLink style={{color: "white"}} to={"/activate_offers"}>
+                        <AllData icon={"https://images-preprod.slivcdn.com/activate/offer.png?h=22&w=22&q=high&fr=webp"} text={"Activate Offer"} />
+                </NavLink>
+
+                <NavLink target="_blank" style={{color: "white"}} to={"https://api.whatsapp.com/send?phone=918591975331&text=hey"}>
+                        <AllData icon={"https://images.slivcdn.com/UI_icons/New_Final_Icons_30052020/WhatsApp_icon_2x.png?h=22&w=22&q=high&fr=webp"} text={"Chat with us on WhatsApp"} />
+                </NavLink>
+                {/* {data.map((each, idx) => {
                     return (
                         <li><AllData icon={each.icon} text={each.text} key={idx} /></li>
                     )
-                })}
+                })} */}
                 {isLogin && <>
                     <li onClick={handleSignOut}>
                         <div className="each-item">
