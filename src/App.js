@@ -16,6 +16,7 @@ import SubscribePage from "./components/Subscribe/SubscripePage";
 import PageNotFound from "./components/Page Not Fount/PageNotFount";
 import SettingPreferences from "./components/Setting and Preferences/SettingPreferences";
 import ActivateOffer from "./components/Activate Offer/AcitvateOffer";
+import ActivateTV from "./components/Activate Tv/ActivateTV";
 
 export default function App() {
   const location = useLocation();
@@ -49,6 +50,7 @@ export default function App() {
           <Route path="*" element={<PageNotFound />} />
           <Route path="/setting-preferences" element={<SettingPreferences />} />
           <Route path="/activate_offers" element={<ActivateOffer />} />
+          <Route path="/activateTV" element={<ActivateTV />} />
         </Routes>
       </AppContextProvider>
     </div>

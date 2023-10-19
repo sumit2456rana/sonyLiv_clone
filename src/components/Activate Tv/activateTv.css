@@ -1,0 +1,37 @@
+.activateTv_container {
+    text-align: center;
+}
+.code_label {
+    margin-top: 40px;
+    padding: 10px;
+    font-size: 20px;
+}
+.activateTV_inputs {
+    margin: 40px 0px;
+}
+.activateTV_inputs input {
+    background-color: #212121;
+    border: none;
+    width: 30px;
+    margin-right: 20px;
+    border-bottom: 1px solid #666;
+    font-size: 1.2rem;
+    color: #fff;
+    outline: none;
+    text-align: center;
+    padding: 5px 0px;
+}
+.activateTV_inputs input:focus {
+    border-bottom: 2px solid #fff;
+}
+.curr_log {
+    color: #aaa;
+    font-size: 14px;
+}
+.noSubscription {
+    width: 50%;
+    text-align: center;
+}
+.activateTv_container .activate_btn {
+    margin-top: 50px;
+}

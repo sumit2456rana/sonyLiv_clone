@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { usePostProvider } from "../AppContextProvider";
 const data = [
     {
-        icon: "https://images.slivcdn.com/UI_icons/New_Final_Icons_30052020/ActivateTV3x.png?h=22&w=22&q=high&fr=webp",
+        icon: "",
         text: "Activate Tv",
     },
     {
@@ -42,6 +42,10 @@ function RightMenu({setShowLogOut}) {
 
                 <NavLink target="_blank" style={{color: "white"}} to={"https://api.whatsapp.com/send?phone=918591975331&text=hey"}>
                         <AllData icon={"https://images.slivcdn.com/UI_icons/New_Final_Icons_30052020/WhatsApp_icon_2x.png?h=22&w=22&q=high&fr=webp"} text={"Chat with us on WhatsApp"} />
+                </NavLink>
+
+                <NavLink style={{color: "white"}} to={"/activateTV"}>
+                        <AllData icon={"https://images.slivcdn.com/UI_icons/New_Final_Icons_30052020/ActivateTV3x.png?h=22&w=22&q=high&fr=webp"} text={"Activate Tv"} />
                 </NavLink>
                 {/* {data.map((each, idx) => {
                     return (

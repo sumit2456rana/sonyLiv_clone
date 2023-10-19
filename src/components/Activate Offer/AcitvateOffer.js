@@ -3,9 +3,18 @@ import "./activateOffer.css";
 import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import { useNavigate } from "react-router-dom";
+import ComingSoon from "../Coming Soon/ComingSoon";
 function ActivateOffer() {
     const [code , setCode] = useState("");
+    const [showComingSoon , setShowComingSoon] = useState(false);
     const navigate = useNavigate();
+    function handleActivateOffer() {
+        setShowComingSoon(true);
+
+        setTimeout(() => {
+            setShowComingSoon(false);
+        } , 3000)
+    }
   return (
     <div className="myaccount-container">
         <div>
@@ -34,11 +43,12 @@ function ActivateOffer() {
                         <p onClick={() => setCode("")}>RESET</p>
                     </div>
                     <div className="activate_btn">
-                        <button disabled={code.length <= 0 ? true : false}>Activate offer</button>
+                        <button onClick={handleActivateOffer} disabled={code.length <= 0 ? true : false}>Activate offer</button>
                     </div>
                 </div>
             </div>
         </div>
+        {showComingSoon && <ComingSoon show={showComingSoon} />}
     </div>
   )
 };
