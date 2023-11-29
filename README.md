@@ -17,7 +17,7 @@
 </ul><ul>
 <li>React</li>
 </ul>
-<h2>Features:</h2>
+<h2>✨Features:</h2>
 <ul>
 <li><strong>On-Demand Content:</strong> Access a variety of shows and movies at your convenience.</li>
 <li><strong>Effortless Search:</strong> Quickly find your favorite content with a simple search.</li>
