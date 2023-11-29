@@ -12,7 +12,7 @@ function MovieUi({MovieDetails}) {
         if (carouselRef.current) {
             carouselRef.current.scrollLeft += width;
         }
-        console.log(width);
+        // console.log(width);
     }
 
     function btnPrev() {
@@ -20,7 +20,7 @@ function MovieUi({MovieDetails}) {
         if (carouselRef.current) {
             carouselRef.current.scrollLeft -= width;
         }
-        console.log(width);
+        // console.log(width);
     }
     useEffect(() => {
         if(window.innerWidth <= 1000){
