@@ -1,70 +1,26 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h1>Sony LIV - Clone</h1>
+<a href='https://sony-liv-clone-coral.vercel.app/'>View Live 🚀</a>
+<hr><p>The Sony Liv clone project is a custom streaming platform that has been painstakingly created to duplicate Sony Liv's wide range of content. This platform creates a captivating environment for entertainment exploration by taking users on an immersive journey through a sizable library of licensed content and original titles. The Sony Liv clone has an intuitive interface and concentrates on providing a personalized and seamless experience across multiple devices, enabling users to effortlessly enjoy an extensive selection of on-demand content.</p><h2>General Information</h2>
+<hr><ul>
+<li>Our project is a dynamic streaming platform inspired by Sony Liv, offering a user-friendly and immersive entertainment experience. The platform features a diverse library of on-demand content, including original productions and third-party titles seamlessly integrated through APIs.</li>
+</ul><ul>
+<li>The Sony Liv clone solves the problems of fragmented content access, tedious content discovery, and a lack of personalization by providing users with a unified platform for diverse on-demand content, an efficient search feature, and personalized recommendations based on their preferences.</li>
+</ul><ul>
+<li>The purpose of the Sony Liv clone project is to offer users a seamless and personalized entertainment experience by consolidating diverse on-demand content into a single, user-friendly platform. It aims to simplify content discovery, enhance personalization through API-driven recommendations, and provide a hassle-free, multi-device viewing experience.</li>
+</ul><h2>Technologies Used</h2>
+<hr><ul>
+<li>HTML</li>
+</ul><ul>
+<li>CSS</li>
+</ul><ul>
+<li>JavaScript</li>
+</ul><ul>
+<li>React</li>
+</ul>
+<h2>Project Screenshots</h2>
+<h4>Home Page:</h4>
+<h4>My account:</h4>
+<h4>Search Page:</h4>
+<h4>My List:</h4>
+<h4>Edit Personal Details:</h4>
+<h4>Subscription page:</h4>
