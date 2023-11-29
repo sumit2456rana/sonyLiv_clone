@@ -18,12 +18,12 @@
 <li>React</li>
 </ul>
 <h2>✨Features:</h2>
-<ul>
-<li><strong>On-Demand Content:</strong> Access a variety of shows and movies at your convenience.</li>
-<li><strong>Effortless Search:</strong> Quickly find your favorite content with a simple search.</li>
-<li><strong>Multi-Device Access:</strong> Seamlessly switch between devices for a consistent viewing experience.</li>
-<li><strong>Diverse Content:</strong> Enjoy a wide range of shows, including third-party titles.</li>
-</ul>
+
+<ul><li><strong>On-Demand Content:</strong> Access a variety of shows and movies at your convenience.</li></ul>
+<ul><li><strong>Effortless Search:</strong> Quickly find your favorite content with a simple search.</li></ul>
+<ul><li><strong>Multi-Device Access:</strong> Seamlessly switch between devices for a consistent viewing experience.</li></ul>
+<ul><li><strong>Diverse Content:</strong> Enjoy a wide range of shows, including third-party titles.</li></ul>
+
 <h2>Project Screenshots</h2>
 <h4>Home Page:</h4>
 <img src='/public/Project Screenshots/Screenshot (64).png' />
