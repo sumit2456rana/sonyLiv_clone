@@ -17,3 +17,10 @@
 </ul><ul>
 <li>React</li>
 </ul>
+<h2>Project Screenshots</h2>
+<h4>Home Page:</h4>
+<h4>My account:</h4>
+<h4>Search Page:</h4>
+<h4>My List:</h4>
+<h4>Edit Personal Details:</h4>
+<h4>Subscription page:</h4>
